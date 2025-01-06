@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends "layout.html" %} {% block content %}
 <style>
     .container {
@@ -68,3 +69,75 @@
   </form>
 </div>
 {% endblock %}
+=======
+{% extends "layout.html" %} {% block content %}
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+    
+      .container label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #ffffff;
+        text-align: left;
+      }
+    
+      .container form {
+        width: 100%;
+      }
+    
+      .container input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        background-color: #2c2f33;
+        color: #ffffff;
+      }
+    
+      .container input:focus {
+        outline: none;
+        background-color: #3a3f44;
+      }
+    
+      .container .btn {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        background-color: #039BE5;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+  .container span {
+    display: none;
+  }
+
+  ul {
+    display: none;
+  }
+</style>
+
+<h2 class="text-white text-center">Register Form</h2>
+<div class="container">
+  <form method="post">
+    {% csrf_token %} {{ form.as_p }}
+    <button class="btn">Register</button>
+  </form>
+</div>
+{% endblock %}
+>>>>>>> 401f02d3c214dd26f48369f50cc42012f22702fe

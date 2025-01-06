@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 WSGI config for chayheadq project.
 
@@ -14,3 +15,21 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chayheadq.settings')
 
 application = get_wsgi_application()
+=======
+"""
+WSGI config for chayheadq project.
+
+It exposes the WSGI callable as a module-level variable named ``application``.
+
+For more information on this file, see
+https://docs.djangoproject.com/en/5.1/howto/deployment/wsgi/
+"""
+
+import os
+
+from django.core.wsgi import get_wsgi_application
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chayheadq.settings')
+
+application = get_wsgi_application()
+>>>>>>> 401f02d3c214dd26f48369f50cc42012f22702fe
