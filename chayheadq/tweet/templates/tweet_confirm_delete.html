@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block title %} Chai aur tweet {% endblock %} {% block content %}
+<style>
+  .delete {
+    background-color: #f44336;
+  }
+  .Cancel {
+    background-color: #4caf50;
+  }
+</style>
+<div class="container text-center mt-5 p-5">
+  <h1 class="mt-4 text-white mb-4">You want to delete this tweet</h1>
+
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn text-white delete">Delete</button>
+    <a class="btn text-white Cancel" href="{% url 'tweet_list' %}">Cancel</a>
+  </form>
+</div>
+
+{% endblock %}
